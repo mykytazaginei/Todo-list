@@ -4,42 +4,55 @@
     box-sizing: border-box;
 }
 
+.wrapper{
+    display: block;
+    max-width: 405px;
+    padding: 28px 0 30px;
+    margin: 137px auto;
+    background: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 body {
-    background-image: linear-gradient(100deg,  #16166f, #061048);
-    color: #ffe625;
+    background: #3C87FF;
+    color: black;
     font-family: "Poppins", sans-serif;
-    min-height: 100vh;
 }
 
-header{
-    font-size: 22px;
-}
-
-header, form{
-    min-height: 20vh;
+ form{
+    min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 form input,
 form button{
-    padding: 8px;
-    font-size: 32px;
-    border:none;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid #999;
     background: white;
+    border-radius: 5px;
 }
 
 form button{
-    color: #16166f;
+    color: #3C87FF;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+form input:focus,
+form input.active{
+  border: 2px solid #3C87FF;
+}
+
 form button:hover{
-    background-color: #16166f;
-    color: #ffe625;
+    background: #3C87FF;
+    color: #ffffff;
 }
 
 .todo-container{
@@ -49,11 +62,13 @@ form button:hover{
 }
 
 .todo-list{
-    min-width: 30%;
+    min-width: 90%;
     list-style: none;
 }
 
-.todo{
+.todo{    
+    border: 1px solid #999;
+    border-radius: 5px;
     margin: 8px;
     background: white;
     color: black;
@@ -70,16 +85,23 @@ form button:hover{
 
 .trash-btn,
 .complete-btn{
-    background: #ffe625;
-    color: black;
+    background: white;
+    color: #3C87FF;
     border: none;
     padding: 16px;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
-.complete-btn{
-    background: rgb(73, 203,73);
+.complete-btn:hover{
+    background: #3C87FF;
+    color: white;
+}
+
+.trash-btn:hover{
+    background: #3C87FF;
+    color: white;
 }
 
 .todo-item{
@@ -97,41 +119,6 @@ form button:hover{
 }
 
 .fall{
-    transform: translateY(128px) rotateZ(20deg);
+    transform: translateY(300px);
     opacity: 0;
-}
-
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    color: #16166f;
-    width: 160px;
-    cursor: pointer;
-    padding: 16px;
-}
-
-.select{
-    margin: 16px;
-    position: relative;
-    overflow: hidden;
-}
-
-.select::after{
-    content: "\25BC";
-    position: absolute;
-    background: #16166f;
-    top: 0;
-    right: 0;
-    padding: 16px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.select:hover::after{
-    background: white;
-    color: #16166f;
 }
