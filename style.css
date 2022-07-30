@@ -12,6 +12,7 @@
     background: #ffffff;
     border-radius: 7px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
 }
 
 body {
@@ -119,6 +120,6 @@ form button:hover{
 }
 
 .fall{
-    transform: translateY(300px);
+    transform: translatez(10px);
     opacity: 0;
 }
